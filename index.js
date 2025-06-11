@@ -20,7 +20,7 @@ class Game {
         });
 
         if (this.playerWins()) {
-            playerTurn.innerHTML = `Jogador ${this.currentPlayer} venceu!`;
+            playerTurn.innerHTML = `Jogador ${this.currentPlayer === 1 ? 2 : 1} venceu!`;
             this.showConfettis(50);
             this.gameEnds = true;
         }

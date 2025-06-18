@@ -13,25 +13,29 @@
 body {
     background-color: #413e3e;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     overflow: hidden;
     width: 100vw;
     height: 100vh;
-}
-
-#player-turn {
-    position: absolute;
-    top: 20px;
+    padding: 80px 0;
 }
 
 #board {
     background-color: white;
     aspect-ratio: 1/1;
-    height: 50%;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     gap: 2px;
+}
+
+@media (max-width: 500px) {
+    #board {
+        width: 90vw;
+        height: auto;
+    }
 }
 
 .row {
@@ -75,4 +79,18 @@ body {
     100% {
         transform: translateY(100vh) rotate(180deg);
     }
+}
+
+#restart-button {
+    background-color: #099C01;
+    transition: all 200ms ease-in-out;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+#restart-button:hover {
+    background-color: #088E01;
 }
